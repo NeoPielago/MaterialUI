@@ -1,14 +1,13 @@
-import { useState } from "react";
 import "./App.css";
+import MuiButton from "./components/MuiButton";
 import { MuiTypography } from "./components/MuiTypography";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <MuiTypography></MuiTypography>
-    </>
+    <div className="app">
+      {/* <MuiTypography></MuiTypography> */}
+      <MuiButton></MuiButton>
+    </div>
   );
 }
 
