@@ -12,13 +12,13 @@ import SendIcon from "@mui/icons-material/Send";
 import React, { useState } from "react";
 
 const MuiButton = () => {
-  const [formats, setFormats] = useState<string[]>([]);
+  const [formats, setFormats] = useState<string | null>(null);
   console.log({
     formats,
   });
   const handleFormatChange = (
     _event: React.MouseEvent<HTMLElement>,
-    updatedFormats: string[]
+    updatedFormats: string | null
   ) => {
     setFormats(updatedFormats);
   };
@@ -96,6 +96,10 @@ const MuiButton = () => {
           aria-label="text formatting"
           value={formats}
           onChange={handleFormatChange}
+          size="small"
+          color="success"
+          orientation="vertical"
+          exclusive
         >
           <ToggleButton value="bold" aria-label="bold">
             <FormatBold></FormatBold>
